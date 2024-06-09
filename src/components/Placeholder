@@ -1,0 +1,144 @@
+import React from 'react';
+import {
+  Box,
+  Typography,
+  Container,
+  Grid,
+  Card,
+  CardContent,
+  Divider,
+} from '@mui/material';
+import VerticalLinearStepper from './VerticalLinearStepper';
+import blacklines from '../assets/blacklines.svg'; // Make sure the path to your image is correct
+
+function Content() {
+  return (
+    <Box sx={{ py: 4 }}>
+      <Container maxWidth='lg'>
+        <Typography variant='h4' component='h2' sx={{ mb: 2 }}>
+          The capabilities beyond imagination
+        </Typography>
+        <Grid container spacing={2}>
+          {Array.from({ length: 3 }).map((_, index) => (
+            <Grid
+              item
+              xs={12}
+              md={4}
+              key={index}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <Card
+                sx={{
+                  borderRadius: 5,
+                  bgcolor: 'black',
+                  color: 'white',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  flex: 1,
+                }}
+              >
+                <CardContent>
+                  <Typography variant='h5' component='div'>
+                    {index === 0 && 'Computer Aided Design'}
+                    {index === 1 && 'Creativity tools'}
+                    {index === 2 && 'Development'}
+                  </Typography>
+                  <Typography variant='body2'>
+                    {index === 0 &&
+                      'Metal bending involves the deformation of metal into various shapes using force, usually with specialized machinery. This process is crucial in manufacturing and construction, enabling the creation of structural components and various products.'}
+                    {index === 1 &&
+                      'A rice cooker is a kitchen appliance designed to cook rice automatically. It typically consists of a heat source, a cooking bowl, and a thermostat. Modern rice cookers come with various settings for cooking different types of rice and other grains.'}
+                    {index === 2 &&
+                      'A water purifier removes contaminants from water to make it safe for drinking. There are various types of purifiers, including those that use filtration, reverse osmosis, or ultraviolet light to eliminate impurities and pathogens.'}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+        <Box
+          sx={{
+            mt: 4, // Margin top to add space between the cards and the new box
+            p: 2, // Padding inside the box
+            borderRadius: 5, // Rounded corners
+            bgcolor: 'grey.800', // Dark grey background
+            color: 'white', // White text color for contrast
+          }}
+        >
+          <VerticalLinearStepper />
+        </Box>
+        <Divider sx={{ my: 4, borderColor: 'black' }} />{' '}
+        {/* Horizontal black divider */}
+        <Grid container spacing={2} alignItems='stretch'>
+          <Grid item xs={12} md={6}>
+            <Box
+              sx={{
+                border: '1px solid black',
+                borderRadius: 5,
+                position: 'relative',
+                overflow: 'hidden',
+                height: '100%', // Make the left box take the full height of its container
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <img
+                src={blacklines}
+                alt='Black Lines'
+                style={{
+                  width: '150%',
+                  height: '150%',
+                  objectFit: 'cover',
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  zIndex: 1,
+                }}
+              />
+              <Typography
+                variant='h3'
+                component='p'
+                sx={{
+                  position: 'relative',
+                  zIndex: 2,
+                  textAlign: 'center',
+                  color: 'black',
+                  fontWeight: 'bold',
+                  p: 2,
+                }}
+              >
+                Positive space for your intrusive thought
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Box
+              sx={{
+                p: { xs: 0, md: 2 }, // Adjust padding for mobile view
+                height: '100%',
+              }}
+            >
+              <Typography variant='body1'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+                egestas odio, vitae scelerisque enim ligula venenatis dolor.
+                Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+                egestas odio, vitae scelerisque enim ligula venenatis dolor.
+                Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+}
+
+export default Content;
