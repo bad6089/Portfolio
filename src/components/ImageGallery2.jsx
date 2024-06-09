@@ -3,16 +3,26 @@ import { Box } from '@mui/material';
 import { styled, keyframes } from '@mui/system';
 import { Dialog, DialogContent } from '@mui/material';
 
+// Import images
+import image9 from '../assets/gallery/image9.png';
+import image10 from '../assets/gallery/image10.png';
+import image11 from '../assets/gallery/image11.png';
+import image12 from '../assets/gallery/image12.png';
+import image13 from '../assets/gallery/image13.png';
+import image14 from '../assets/gallery/image14.png';
+import image15 from '../assets/gallery/image15.png';
+import image16 from '../assets/gallery/image16.png';
+
 const images = [
-  '/src/assets/gallery/image9.png',
-  '/src/assets/gallery/image10.png',
-  '/src/assets/gallery/image11.png',
-  '/src/assets/gallery/image12.png',
-  '/src/assets/gallery/image13.png',
-  '/src/assets/gallery/image14.png',
-  '/src/assets/gallery/image15.png',
-  '/src/assets/gallery/image16.png',
-  // Add more image paths as needed
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
+  image16,
+  // Add more image imports as needed
 ];
 
 const scroll = keyframes`
