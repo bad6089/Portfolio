@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Divider, Chip } from '@mui/material';
 import VerticalLinearStepper from './VerticalLinearStepper';
-import SwipeableTextMobileStepper from './SwipeableTextMobileStepper';
 import SectionCard from './SectionCard';
 import ActionAreaCard from './ActionAreaCard';
 import blacklines from '../assets/blacklines.gif';
@@ -143,7 +142,7 @@ function Content() {
           </Grid>
           <Grid item xs={12} md={5}>
             <Box sx={{ width: '100%' }}>
-              <SwipeableTextMobileStepper />
+             
             </Box>
           </Grid>
         </Grid>
