@@ -8,12 +8,10 @@ import InfoSection from './InfoSection'; // Import the InfoSection component
 import ImageGallery from './ImageGallery'; // Import the ImageGallery component
 import ImageGallery2 from './ImageGallery2'; // Import the ImageGallery component
 import MusicPlayer from './MusicPlayer';
+import Skills from './Skills';
 import {
-  Architecture as ArchitectureIcon,
   Brush as BrushIcon,
   Terminal as TerminalIcon,
-  WorkHistory as WorkHistoryIcon,
-  ArtTrack as ArtTrackIcon,
   ViewInAr as ViewInArIcon,
 } from '@mui/icons-material';
 
@@ -126,26 +124,38 @@ function Content() {
         <Typography variant='h4' component='h2' sx={{ mt: 4, mb: 2 }}>
           Experience gathered so far
         </Typography>
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={7}>
+        <Grid
+          container
+          spacing={2}
+          sx={{ display: 'flex', alignItems: 'stretch' }}
+        >
+          <Grid item xs={12} md={7} sx={{ display: 'flex' }}>
             <Box
               sx={{
                 p: 2,
                 borderRadius: 5,
                 bgcolor: '#14181b',
                 color: 'white',
-                height: '100%',
+                flexGrow: 1,
               }}
             >
               <VerticalLinearStepper />
             </Box>
           </Grid>
-          <Grid item xs={12} md={5}>
-            <Box sx={{ width: '100%' }}>
-             
+          <Grid item xs={12} md={5} sx={{ display: 'flex' }}>
+            <Box
+              sx={{
+                width: '100%',
+                flexGrow: 1,
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <Skills />
             </Box>
           </Grid>
         </Grid>
+
         <Divider sx={{ my: 4, borderColor: 'black' }} />
         <Grid container spacing={2} alignItems='stretch'>
           <Grid item xs={12} md={6}>
@@ -270,11 +280,10 @@ function Content() {
         <InfoSection />
         <ImageGallery />
         <ImageGallery2 style={{ marginTop: '-10px' }} />
-         <Box sx={{ mt: 8 }}>
-        <MusicPlayer />
-      </Box>
+        <Box sx={{ mt: 8 }}>
+          <MusicPlayer />
+        </Box>
       </Container>
-      
     </Box>
   );
 }
