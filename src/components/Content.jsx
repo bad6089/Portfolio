@@ -3,7 +3,6 @@ import { Box, Typography, Container, Grid, Divider, Chip } from '@mui/material';
 import VerticalLinearStepper from './VerticalLinearStepper';
 import SectionCard from './SectionCard';
 import ActionAreaCard from './ActionAreaCard';
-import blacklines from '../assets/blacklines.gif';
 import InfoSection from './InfoSection'; // Import the InfoSection component
 import ImageGallery from './ImageGallery'; // Import the ImageGallery component
 import ImageGallery2 from './ImageGallery2'; // Import the ImageGallery component
@@ -15,15 +14,33 @@ import {
   ViewInAr as ViewInArIcon,
 } from '@mui/icons-material';
 
+// Import images
+import blacklines from '../assets/blacklines.gif';
+import nx from '../assets/CAD/nx.png';
+import sw from '../assets/CAD/sw.png';
+import catia from '../assets/CAD/catia.png';
+import autocad from '../assets/CAD/autocad.png';
+import ai from '../assets/CAD/ai.png';
+import gimp from '../assets/CAD/gimp.png';
+import sd from '../assets/CAD/sd.png';
+import filmora from '../assets/CAD/filmora.png';
+import react from '../assets/CAD/react.png';
+import vite from '../assets/CAD/vite.png';
+import chakra from '../assets/CAD/chakra.png';
+import mui from '../assets/CAD/mui.png';
+import ezweb from '../assets/PROJECT/ezweb.png';
+import routematch from '../assets/PROJECT/routematch.jpg';
+import iguana from '../assets/PROJECT/iguana.jpg';
+
 const contentData = [
   {
     title: 'Computer Aided Design',
     icon: <ViewInArIcon />,
     items: [
-      { text: 'Siemens NX', src: '../src/assets/CAD/nx.png' },
-      { text: 'Solidworks', src: '../src/assets/CAD/sw.png' },
-      { text: 'Catia', src: '../src/assets/CAD/catia.png' },
-      { text: 'Autocad', src: '../src/assets/CAD/autocad.png' },
+      { text: 'Siemens NX', src: nx },
+      { text: 'Solidworks', src: sw },
+      { text: 'Catia', src: catia },
+      { text: 'Autocad', src: autocad },
     ],
     bgColor: '#121212',
   },
@@ -31,10 +48,10 @@ const contentData = [
     title: 'Creativity tools',
     icon: <BrushIcon />,
     items: [
-      { text: 'Adobe Illustrator', src: '../src/assets/CAD/ai.png' },
-      { text: 'Gimp', src: '../src/assets/CAD/gimp.png' },
-      { text: 'Automatic1111', src: '../src/assets/CAD/sd.png' },
-      { text: 'Filmora', src: '../src/assets/CAD/filmora.png' },
+      { text: 'Adobe Illustrator', src: ai },
+      { text: 'Gimp', src: gimp },
+      { text: 'Automatic1111', src: sd },
+      { text: 'Filmora', src: filmora },
     ],
     bgColor: '#110e1b',
   },
@@ -42,10 +59,10 @@ const contentData = [
     title: 'Web Development',
     icon: <TerminalIcon />,
     items: [
-      { text: 'React js', src: '/src/assets/CAD/react.png' },
-      { text: 'HTML', src: '/src/assets/CAD/vite.png' },
-      { text: 'Chakra UI', src: '/src/assets/CAD/chakra.png' },
-      { text: 'Material UI', src: '/src/assets/CAD/mui.png' },
+      { text: 'React js', src: react },
+      { text: 'HTML', src: vite },
+      { text: 'Chakra UI', src: chakra },
+      { text: 'Material UI', src: mui },
     ],
     bgColor: '#0d0e14',
   },
@@ -53,21 +70,21 @@ const contentData = [
 
 const cardData = [
   {
-    image: '/src/assets/PROJECT/ezweb.png',
+    image: ezweb,
     title: 'Ezzytech Enginnering Website',
     description:
       '[HTML] Crafted this masterpiece of cooperate website during pandemic. Had alot of time on hand, so took the challange to make a website for my previous company that I worked with.',
     link: 'https://bad6089.github.io/Ezzytech/',
   },
   {
-    image: '/src/assets/PROJECT/routematch.jpg',
+    image: routematch,
     title: 'Route Matching Tool',
     description:
       '[Vite + React] Utilizing LocationIQ and OpenRouteService API. With the aid of turf, leaflet and lodash dependencies, user can compare % of overlapping of two routes and it will automatically provide entry and exit intersection of the route  ',
     link: 'https://route-match.vercel.app/',
   },
   {
-    image: '/src/assets/PROJECT/iguana.jpg',
+    image: iguana,
     title: 'Iguana',
     description:
       'Above the iguana image is just a placeholder for my next project. Why an iguana, you ask? Well, I have no idea. It just seemed like the right lizard at the right time!',
@@ -91,7 +108,6 @@ const SquigglyLine = () => (
     />
   </svg>
 );
-
 
 function Content() {
   return (
