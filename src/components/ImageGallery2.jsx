@@ -12,6 +12,9 @@ import image13 from '../assets/gallery/image13.png';
 import image14 from '../assets/gallery/image14.png';
 import image15 from '../assets/gallery/image15.png';
 import image16 from '../assets/gallery/image16.png';
+import image17 from '../assets/gallery/image17.png';
+import image18 from '../assets/gallery/image18.png';
+import image19 from '../assets/gallery/image19.png';
 
 const images = [
   image9,
@@ -22,11 +25,14 @@ const images = [
   image14,
   image15,
   image16,
+  image17,
+  image18,
+  image19,
   // Add more image imports as needed
 ];
 
 const scroll = keyframes`
-  0% { transform: translateX(-100%); }
+0% { transform: translateX(-100%); }
   100% { transform: translateX(calc(0)); }
 `;
 
@@ -34,11 +40,13 @@ const ImageWrapper = styled('div')(({ duration }) => ({
   display: 'flex',
   whiteSpace: 'nowrap',
   animation: `${scroll} ${duration}s linear infinite`,
+  width: '100%',
 }));
 
 const ImageItem = styled('img')({
   height: '250px',
   marginRight: '10px',
+  cursor: 'pointer',
   marginTop: '-30px', // Reduce the top margin
   marginBottom: '10px', 
 });
@@ -49,10 +57,10 @@ function ImageGallery2() {
   const [duration, setDuration] = useState(20);
 
   useEffect(() => {
-    const totalWidth = images.length * 1000 + (images.length - 1) * 20; // Width of all images + margin
+    const totalWidth = images.length * 250 + (images.length - 1) * 10; // Adjust based on image height and margin
     const screenWidth = window.innerWidth;
-    const baseDuration = 3; // Adjust this value to speed up or slow down the scrolling
-    const animationDuration = (totalWidth / screenWidth) * baseDuration; // Base duration multiplied by ratio of total width to screen width
+    const baseDuration = 20; // Fixed duration for scrolling
+    const animationDuration = (totalWidth / screenWidth) * baseDuration;
     setDuration(animationDuration);
   }, []);
 
@@ -66,7 +74,7 @@ function ImageGallery2() {
   };
 
   return (
-    <Box sx={{ overflow: 'hidden', whiteSpace: 'nowrap', py: 4 }}>
+    <Box sx={{ width: '100vw', overflow: 'hidden', whiteSpace: 'nowrap', py: 4, position: 'relative', left: '50%', transform: 'translateX(-50%)' }}>
       <ImageWrapper duration={duration}>
         {images.map((image, index) => (
           <ImageItem
