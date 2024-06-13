@@ -73,7 +73,7 @@ const cardData = [
     image: ezweb,
     title: 'Ezzytech Enginnering Website',
     description:
-      '[HTML] Crafted this masterpiece of cooperate website during pandemic. Had alot of time on hand, so took the challange to make a website for my previous company that I worked with.',
+      '[HTML] Crafted this masterpiece of cooperate website during pandemic. Had alot of time on hand, so took the challange to make a website while relearn the basic of HTML',
     link: 'https://bad6089.github.io/Ezzytech/',
   },
   {

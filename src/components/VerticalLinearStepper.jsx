@@ -7,20 +7,26 @@ const steps = [
   {
     label: 'Design Engineer',
     year: '2024',
-    description: `DYSON GLOBAL DEVELOPMENT CENTER, JOHOR, MY
-                  Cable, harness and electrical integration group for Enviromental Care porduct.`,
+    description: [
+      'A leading UK-based manufacturer of household appliances.',
+      'Cable, harness and electrical integration group for Environmental Care product.',
+    ],
   },
   {
     label: 'Senior R&D Engineer',
     year: '2017',
-    description: `PANASONIC APPLIANCE R&D, SELANGOR, MALAYSIA
-                  Kitchen Appliance Division. Develop Rice Cooker and Water Purifier product.`,
+    description: [
+      'A major Japanese manufacturer of kitchen appliances.',
+      'Kitchen Appliance Division. Develop Rice Cooker and Water Purifier product.',
+    ],
   },
   {
     label: 'Design Engineer',
     year: '2015',
-    description: `EZZYTECH ENGINEERING, SELANGOR, MALAYSIA
-                  Specialize in sheet metal design. Deisgn of electrical panel and sheet metal cabinet.`,
+    description: [
+      'A small local sheet metal manufacturing company.',
+      'Specialize in sheet metal design. Design of electrical panel and sheet metal cabinet.',
+    ],
   },
 ];
 
@@ -64,14 +70,14 @@ export default function CustomTimeline() {
                 {step.label}
               </Typography>
             </Box>
-            <Typography variant='body2' sx={{ ml: 4 }}>
-              {step.description.split('\n').map((line, i) => (
-                <React.Fragment key={i}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
-            </Typography>
+            <Box sx={{ ml: 4 }}>
+              <Typography variant='body2' sx={{ fontStyle: 'italic' }}>
+                {step.description[0]}
+              </Typography>
+              <Typography variant='body2' sx={{ mt: 0.5 }}>
+                {step.description[1]}
+              </Typography>
+            </Box>
           </Box>
         </Box>
       ))}
